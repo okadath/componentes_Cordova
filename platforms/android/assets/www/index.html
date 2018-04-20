@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="my-app">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+
+  <link rel="stylesheet" href="css/onsenui.css"/>
+  <link rel="stylesheet" href="css/onsen-css-components.css"/>
+  <script src="js/angular.js"></script>
+  <script src="js/onsenui.min.js"></script>
+  <script src="js/angular-onsenui.min.js"></script>
+    <script src="js/ang_module.js"></script>
+      <script src="js/ini.js"></script>
+
+</head>
+<body>
+  <ons-page ng-controller="PageController" ng-init="volume = 25; brightness = 50; approval = 75">
+    <ons-toolbar>
+      <div class="center">Title</div>
+    </ons-toolbar>
+
+    <p style="text-align: center" >
+      <ons-button ng-click="alert('Hello World!')">
+        Click me!
+      </ons-button>
+    </p>
+    
+    <ons-icon icon="md-face"></ons-icon>
+    <ons-icon icon="md-home"></ons-icon>
+    <ons-icon icon="md-zoom-in"></ons-icon>
+
+<label class="switch switch--material">
+  <input type="checkbox" class="switch__input switch--material__input">
+  <div class="switch__toggle switch--material__toggle">
+    <div class="switch__handle switch--material__handle">
+    </div>
+  </div>
+</label>
+<label class="switch switch--material">
+  <input type="checkbox" class="switch__input switch--material__input" checked>
+  <div class="switch__toggle switch--material__toggle">
+    <div class="switch__handle switch--material__handle">
+    </div>
+  </div>
+</label>
+<label class="switch switch--material">
+  <input type="checkbox" class="switch__input switch--material__input" disabled>
+  <div class="switch__toggle switch--material__toggle">
+    <div class="switch__handle switch--material__handle">
+    </div>
+  </div>
+</label>
+
+<div class="range range--material">
+  <input type="range" class="range__input range--material__input" min="0" max="100">
+  <!-- <input type="range" class="range__focus-ring range--material__focus-ring"> -->
+</div>
+
+<div class="range range--material range--disabled">
+  <input type="range" class="range__input range--material__input" disabled>
+  <!-- <input type="range" class="range__focus-ring range--material__focus-ring" disabled> -->
+</div>
+
+<span class="notification notification--material">1</span>
+<span class="notification notification--material">10</span>
+<span class="notification notification--material">999</span>
+
+
+
+
+<label class="checkbox checkbox--material">
+  <input type="checkbox" class="checkbox__input checkbox--material__input">
+  <div class="checkbox__checkmark checkbox--material__checkmark"></div>
+  OFF
+</label>
+<label class="checkbox checkbox--material">
+  <input type="checkbox" class="checkbox__input checkbox--material__input" checked="checked">
+  <div class="checkbox__checkmark checkbox--material__checkmark"></div>
+  ON
+</label>
+<label class="checkbox checkbox--material">
+  <input type="checkbox" class="checkbox__input checkbox--material__input" checked="checked" disabled>
+  <div class="checkbox__checkmark checkbox--material__checkmark"></div>
+  ON
+</label>
+<label class="checkbox checkbox--material">
+  <input type="checkbox" class="checkbox__input checkbox--material__input" disabled>
+  <div class="checkbox__checkmark checkbox--material__checkmark"></div>
+  Disabled
+</label>
+
+<button class="button button--material">BUTTON</button>
+<button class="button button--material" disabled>DISABLED</button>
+
+<button class="button--cta">Button</button>
+<button class="button--cta" disabled>Button</button>
+<button class="button">Button</button>
+<button class="button" disabled>Button</button>
+
+
+<br>
+<ons-icon
+icon="ion-edit, material:md-edit">
+</ons-icon>
+  <p>
+    <ons-row>
+      <ons-col width="40px" style="text-align: center; line-height: 31px;">
+        <ons-icon icon="md-volume-down"></ons-icon>
+      </ons-col>
+      <ons-col>
+        <ons-range style="width: 100%;" ng-model="volume"></ons-range>
+      </ons-col>
+      <ons-col width="40px" style="text-align: center; line-height: 31px;">
+        <ons-icon icon="md-volume-up"></ons-icon>
+      </ons-col>
+    </ons-row>
+    <ons-row style="margin-top: 20px;">
+      <ons-col width="40px" style="text-align: center; line-height: 31px;">
+        <ons-icon icon="md-brightness-low"></ons-icon>
+      </ons-col>
+      <ons-col>
+        <ons-range style="width: 100%;" ng-model="brightness"></ons-range>
+      </ons-col>
+      <ons-col width="40px" style="text-align: center; line-height: 31px;">
+        <ons-icon icon="md-brightness-high"></ons-icon>
+      </ons-col>
+    </ons-row>
+    <ons-row style="margin-top: 20px;">
+      <ons-col width="40px" style="text-align: center; line-height: 31px;">
+        <ons-icon icon="md-thumb-down"></ons-icon>
+      </ons-col>
+      <ons-col>
+        <ons-range disabled style="width: 100%;" ng-model="approval"></ons-range>
+      </ons-col>
+      <ons-col width="40px" style="text-align: center; line-height: 31px;">
+        <ons-icon icon="md-thumb-up"></ons-icon>
+      </ons-col>
+    </ons-row>
+  </p>
+
+  <h4>Volume: {{volume}} | Brightness: {{brightness}} | Approval: {{approval}}</h4>
+</ons-page>
+
+ <div class="app">
+            <h1>Apache Cordova</h1>
+           
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+</body>
+</html>
+
+
+
+
+
